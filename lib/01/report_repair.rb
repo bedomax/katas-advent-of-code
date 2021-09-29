@@ -10,7 +10,7 @@ class ReportRepair
     result = 0
     sorter = @expenses.combination(combination)
     result = sorter.find_all { |a, b| a + b  == sum }.flatten.inject(:*) if combination == 2
-    result =sorter.find_all { |a, b, c| a + b + c == sum }.flatten.inject(:*) if combination == 3
+    result = sorter.find_all { |a, b, c| a + b + c == sum }.flatten.inject(:*) if combination == 3
     result
   end
 end
