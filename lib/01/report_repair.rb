@@ -6,10 +6,11 @@ class ReportRepair
   def initialize
     @expenses = FileHelper.read_file_to_array(path:PATH_FILE, integer: true)
   end
-  def part_1
-    pairs = @expenses.combination(2).find_all do |a, b|
-      a + b == 2020
-    end
-    pairs.flatten.inject(:*)
+  def calc_entries(combination:2, sum:2020)
+    result = 0
+    sorter = @expenses.combination(combination)
+    result = sorter.find_all { |a, b| a + b  == sum }.flatten.inject(:*) if combination == 2
+    result =sorter.find_all { |a, b, c| a + b + c == sum }.flatten.inject(:*) if combination == 3
+    result
   end
 end
