@@ -1,19 +1,19 @@
-require_relative '../../helpers/file_helper'
+require_relative '../../../helpers/file_helper'
 
 class PasswordPhilosophy
   PATH_FILE = "./assets/02/input.txt"
   attr_reader :passwords
 
-  def initialize
-    @passwords = FileHelper.read_file_to_array(path:PATH_FILE)
+  def initialize(input_file:PATH_FILE)
+    @passwords = FileHelper.read_file_to_array(path:input_file)
   end
 
   def validate_structure
-    @passwords.filter(&method(:validate_structure_rule)).size
+    passwords.filter(&method(:validate_structure_rule)).size
   end
 
   def validate_position
-    @passwords.filter(&method(:validate_position_rule)).size
+    passwords.filter(&method(:validate_position_rule)).size
   end
 
   private
