@@ -6,6 +6,7 @@ class App
     @challenge_1 = ReportRepair.new
     @challenge_2 = PasswordPhilosophy.new
     @challenge_3 = TobogganTrajectory.new
+    @challenge_4 = PassportProcessing.new
   end
   def call
     puts "**********************************"
@@ -26,8 +27,8 @@ class App
     puts "Part Two: "++@challenge_3.get_number_trees_with_slopes.to_s+".... ✅"
     puts "\n"
     puts "--- Day 4: Passport Processing ---"
-    puts "Part One: "+0.to_s+".... ✅"
-    puts "Part Two: "+0.to_s+".... ✅"
+    puts "Part One: "+@challenge_4.get_total_valid.to_s+".... ✅"
+    puts "Part Two: "+@challenge_4.get_total_valid(rules:true).to_s+".... ✅"
     puts "\n"
     puts "\n"
     puts "\n"

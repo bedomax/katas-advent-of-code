@@ -4,4 +4,7 @@ module FileHelper
     data = data.map(&:to_i) if integer
     data
   end
+  def self.read_file_with_separator(path:, separator:' ')
+    File.read(path).split(separator)
+  end
 end
