@@ -19,7 +19,7 @@ Run main program:
 ruby lib/main.rb
 ```
 
-Screenshots of the coding:
+Screenshots:
 
 ![Screen Shot 2021-10-02 at 20 00 16](https://user-images.githubusercontent.com/43079/135763680-8193b8e4-979a-4ff8-9b0a-f9feaa85c43c.png)
 ![Screen Shot 2021-10-03 at 11 45 18](https://user-images.githubusercontent.com/43079/135763689-5287b3b1-bcd6-42ee-9fae-02cf52dc7679.png)
